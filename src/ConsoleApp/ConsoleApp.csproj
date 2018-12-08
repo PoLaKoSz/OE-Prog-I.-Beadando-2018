@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60814B2C-50B8-44F4-929A-05F7EA8B1C37}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PoLaKoSz.OE._2018_.PyramidGame</RootNamespace>
+    <AssemblyName>ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccessLayer\FileAccess.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Models\Map.cs" />
+    <Compile Include="Models\BoardFrame.cs" />
+    <Compile Include="Models\ColoredPillar.cs" />
+    <Compile Include="Models\GameSettings.cs" />
+    <Compile Include="Models\Pillar.cs" />
+    <Compile Include="Models\Builder.cs" />
+    <Compile Include="Models\Path.cs" />
+    <Compile Include="Models\StoneCube.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\BoardViewModel.cs" />
+    <Compile Include="ViewModels\BuilderRules.cs" />
+    <Compile Include="ViewModels\BuilderViewModel.cs" />
+    <Compile Include="ViewModels\NearestPillars.cs" />
+    <Compile Include="ViewModels\PathGenerator.cs" />
+    <Compile Include="ViewModels\PyramidGame.cs" />
+    <Compile Include="ViewModels\PathHistory.cs" />
+    <Compile Include="ViewModels\RoadCalculator.cs" />
+    <Compile Include="Views\BoardView.cs" />
+    <Compile Include="Views\BuilderView.cs" />
+    <Compile Include="Views\PyramidView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="PIRAMIS.BE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
